@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var shaperSchema = new Schema({
-//   user_id: {
-//     type: null,
-//   },
-  author: {
-    name: String,
-    email: String
-  }
-});
+// var shaperSchema = new Schema({
+// //   user_id: {
+// //     type: null,
+// //   },
+//   author: {
+//     name: String,
+//     email: String
+//   }
+// });
 
 var changesSchema = new Schema({
     changeTitle: String,
@@ -25,7 +25,10 @@ var worldSchema = new Schema({
     culture: String,
     combatTech: String,
     history: String,
-    supernaturalEl: String
+    supernaturalEl: String,
+    changes: [changesSchema],
+    maker: [{type: Schema.Types.ObjectId, ref: 'Maker'}]
+    
 });
 
 module.exports = mongoose.model('Shaper', shaperSchema);
