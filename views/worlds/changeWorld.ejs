@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<section id="changeWorld">
+<form action= "/worlds/<%= world._id %>?_method=PUT" method= "POST">  
+<div>Title: </div>
+<input value="<%= world.worldTitle %>" name="worldTitle"></input>
+<div> Background: </div>
+<input value ="<%= world.background %>"name="background"</div>
+<div>Technologie: </div>
+<input value ="<%= world.technologie %>"name="technologie"</div>
+<div> Time Period: </div>
+<input value ="<%= world.time %>"name="time"</div>
+<div>Culture:</div>
+<input value ="<%= world.culture %>"name="culture"</div>
+<div>combatTech </div>
+<input value ="<%= world.combatTech %>"name="combatTech"</div>
+<div> history</div>
+<input value ="<%= world.history %>"name="history"</div>
+<div>supernaturalEl </div>
+<input value ="<%= world.supernaturalEl %>"name="supernaturalEl"</div>
+<button type="submit">Update World</button>
+</form>
+</section>
+<br>
+<br>
+<form action= "/worlds/<%= world._id %>?_method=DELETE" method= "POST"> 
+<button type="submit">delete world</button>
+</form>

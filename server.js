@@ -10,7 +10,7 @@ var methodOverride = require('method-override');
 // var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var makerRouter = require('./routes/maker');
-// var newRouter = require('./routes/maker')
+// var changeRouter = require('./routes/maker')
 
 var app = express();
 

@@ -15,7 +15,7 @@ var makerSchema = new Schema({
 var changesSchema = new Schema({
     changeTitle: String,
     changeTxt: String,
-    shaper: [makerSchema]
+    maker: [makerSchema]
 });
 
 var worldSchema = new Schema({
