@@ -18,3 +18,42 @@
   <div>supernaturalEl </div>
   <div><%= world.supernaturalEl %></div>
 </section>
+<br>
+<br>
+<br><br><h2>Shaper Stories</h2>
+<form id="add-story-form" method="POST"
+  action="/worlds/<%= world._id %>/change">
+  <label>Story:</label>
+  <textarea name="content"></textarea>
+  <input type="submit" value="Shape the world">
+</form>
+<br>
+<br>
+<% if (world.length) { %>
+  <table>
+    <thead>
+      <tr>
+      	 <th>Date</th>
+        <th>Story</th>
+
+      </tr>
+    </thead>
+    <tbody>
+ 
+      <% world.change.forEach(function(r) { %>
+
+        <tr>
+          <td><%= r.createdAt.toLocaleDateString() %></td>
+          <td><%= r.content %></td>
+
+        </tr>
+        <% }); %>
+        <tr>
+          <td colspan="2"></td>
+
+        </tr>
+    </tbody>
+  </table>
+<% } else { %>
+  <h5>No Stories Yet</h5>
+<% } %>
