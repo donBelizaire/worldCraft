@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>World Title</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% worlds.forEach(function(w) { %>
+      <tr>
+        <td><%= w.worldTitle %></td>
+        <td><a href="./<%=w._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>

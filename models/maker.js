@@ -12,4 +12,24 @@ var makerSchema = new Schema({
     
 });
 
-module.exports = mongoose.model('Maker', makerSchema);
+var changesSchema = new Schema({
+    changeTitle: String,
+    changeTxt: String,
+    shaper: [makerSchema]
+});
+
+var worldSchema = new Schema({
+    worldTitle: String,
+    background: String,
+    technologie: String,
+    time: String,
+    culture: String,
+    combatTech: String,
+    history: String,
+    supernaturalEl: String,
+    changes: [changesSchema],
+    maker: [makerSchema]
+    
+});
+
+module.exports = mongoose.model('World', worldSchema);
