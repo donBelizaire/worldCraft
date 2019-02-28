@@ -15,18 +15,17 @@
 <li class="nav-item">
 <a class="nav-link disabled" href="#">Disabled</a>
 </li>
-</ul>
 <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-
 <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</ul>
+
 <br>
 <br>
 </nav>
 </head>
-
-
+<br>
+<br>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Welcome to WorldCraft</h1>
@@ -40,14 +39,17 @@
 
 
 
-<body>
+<body class="homeBody">
     
+<% worlds.forEach(function(w) { %>
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src="'https://imgur.com/I7CdlJg.png'" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">World Title</h5>
+    <p class="card-text"><%= w.worldTitle %></p>
+    <a href="./<%=w._id %>" class="btn btn-primary">Enter</a>
+    <a href="./worlds/<%=w._id %>" class="btn btn-primary">EDIT WORLD</a>
+    <% }); %>
   </div>
 </div>
 
@@ -75,3 +77,4 @@
     </tbody>
     
   </table>
+  <%- include('../partials/footer') %>

@@ -3,16 +3,32 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
+/* a {
   color: #00B7FF;
-}
+} */
 
 .head {
   background: rgba(64, 67, 68, 0.281);
 }
 
 .container { 
-  background-image: url('https://imgur.com/I7CdlJg.png');
-  color: white;
+  background-image: url('https://imgur.com/WimsCQZ.jpg');
+  color: rgb(238, 245, 238);
+  font-family: cursive;
+  text-align: center;
+  background-size: cover;  
 
+}
+
+.card{
+
+}
+
+.homeBody{
+  background-image: url('https://imgur.com/I7CdlJg.png');
+  background-size: cover;
+}
+
+.jumbotron{
+  background: black;
 }
