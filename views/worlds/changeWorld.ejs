@@ -1,28 +1,79 @@
 <%- include('../partials/header') %>
+<head>
+<nav class="head">
+<ul class="nav justify-content-center">
+<li class="nav-item">
+  <a class="nav-link active" href="/">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+</ul>
+<br>
+<br>
+</nav>
+</head>
 
-<section id="changeWorld">
-<form action= "/worlds/<%= world._id %>?_method=PUT" method= "POST">  
-<div>Title: </div>
-<input value="<%= world.worldTitle %>" name="worldTitle"></input>
-<div> Background: </div>
-<input value ="<%= world.background %>"name="background"</div>
-<div>Technologie: </div>
-<input value ="<%= world.technologie %>"name="technologie"</div>
-<div> Time Period: </div>
-<input value ="<%= world.time %>"name="time"</div>
-<div>Culture:</div>
-<input value ="<%= world.culture %>"name="culture"</div>
-<div>combatTech </div>
-<input value ="<%= world.combatTech %>"name="combatTech"</div>
-<div> history</div>
-<input value ="<%= world.history %>"name="history"</div>
-<div>supernaturalEl </div>
-<input value ="<%= world.supernaturalEl %>"name="supernaturalEl"</div>
-<button type="submit">Update World</button>
-</form>
-</section>
-<br>
-<br>
+
+<body>
 <form action= "/worlds/<%= world._id %>?_method=DELETE" method= "POST"> 
-<button type="submit">delete world</button>
+<button type="submit" class="btn btn-primary btn-lg">Destroy the World!</button>
 </form>
+<br>
+<br>
+<form action= "/worlds/<%= world._id %>?_method=PUT" method= "POST">  
+
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Title:</label>
+    <textarea name='worldTitle' class="form-control" id="exampleFormControlTextarea1" rows="3"><%= world.worldTitle %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Background</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='background'><%= world.background %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Technologie</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='technologie'><%= world.technologie %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Time Period</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='time'><%= world.time %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Culture</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='culture'><%= world.culture %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Combat Technology</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='combatTech'><%= world.combatTech %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">History</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='history'><%= world.history %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Supernatural Elements</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='supernaturalEL'><%= world.supernaturalEl %></textarea>
+  </div>
+<br>
+<br>
+<button type="submit" class="btn btn-primary btn-lg">Change the World!</button>
+<br>
+<br>
+
+</form>
+</body>
+

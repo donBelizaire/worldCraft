@@ -1,34 +1,75 @@
 <%- include('../partials/header') %>
+<head>
+<nav class="head">
+<ul class="nav justify-content-center">
+<li class="nav-item">
+  <a class="nav-link active" href="/">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+</ul>
+<br>
+<br>
+</nav>
+</head>
 
-<section id="showWorld">
-  <div>Title: </div>
-  <div><%= world.worldTitle %></div>
-  <div> Background: </div>
-  <div><%= world.background %></div>
-  <div>Technologie: </div>
-  <div><%= world.technologie %></div>
-  <div> Time Period: </div>
-  <div><%= world.time %></div>
-  <div>Culture:</div>
-  <div><%= world.culture %></div>
-  <div>combatTech </div>
-  <div><%= world.combatTech %></div>
-  <div> history</div>
-  <div><%= world.history %></div>
-  <div>supernaturalEl </div>
-  <div><%= world.supernaturalEl %></div>
-</section>
+
+<body>
+    
+<nav id="navbar-example3" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <nav class="nav nav-pills flex-column">
+    <a class="nav-link" href="#item-1"> Title</a>
+    <a class="nav-link" href="#item-2">Background </a>
+    <a class="nav-link" href="#item-3">Technologie</a>
+    <a class="nav-link" href="#item-4">Time Period</a>
+    <a class="nav-link" href="#item-5">Culture</a>
+    <a class="nav-link" href="#item-6">combatTech</a>
+    <a class="nav-link" href="#item-7">history</a>
+    <a class="nav-link" href="#item-">supernaturalEl</a>
+  </nav>
+</nav>
+
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+  <h4 id="item-1">Title:</h4>
+  <p><%= world.worldTitle %></p>
+  <h5 id="item-2">Background:</h5>
+  <p><%= world.background %></p>
+  <h5 id="item-3">Technologie:</h5>
+  <p><%= world.technologie %></p>
+  <h4 id="item-4">Time Period:</h4>
+  <p><%= world.time %></p>
+  <h4 id="item-5">Culture:</h4>
+  <p><%= world.culture %></p>
+  <h5 id="item-6">combatTech </h5>
+  <p><%= world.combatTech %></p>
+  <h5 id="item-7">history</h5>
+  <p><%= world.history %></p>
+  <h5 id="item-8">supernaturalEl </h5>
+  <p><%= world.supernaturalEl %></p>
+
+</div>
 <br>
 <br>
-<br><br><h2>Shaper Stories</h2>
 <form id="add-story-form" method="POST"
-  action="/worlds/<%= world._id %>/change">
-  <label>Story:</label>
-  <textarea name="content"></textarea>
-  <input type="submit" value="Shape the world">
-</form>
-<br>
-<br>
+action="/worlds/<%= world._id %>/change">
+<div class="form-group">
+<h2>World Event</h2>
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
+<button type="submit" class="btn btn-primary btn-lg">Shape the World!</button>
+</div>
+
+</body>
+
+<br><br><h2>Shaper Stories</h2>
+
 <% if (world.length) { %>
   <table>
     <thead>
@@ -57,3 +98,5 @@
 <% } else { %>
   <h5>No Stories Yet</h5>
 <% } %>
+
+<%- include('../partials/footer') %>

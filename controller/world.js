@@ -31,9 +31,10 @@ function newWorld(req, res) {
 function createWorld(req, res) {
     console.log('world was created');
     var world = new World(req.body);
+    console.log(req.body)
   world.save(function(err) {
     if (err) return res.redirect('/worlds/new');
-    res.redirect('/');
-    // res.redirect(`/worlds/${world._id}`);
+    // res.redirect('/');
+    res.redirect(`/worlds/${world._id}`);
   });
 }

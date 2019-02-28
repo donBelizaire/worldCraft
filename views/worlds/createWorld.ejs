@@ -1,28 +1,79 @@
 <%- include('../partials/header') %>
+<head>
+<nav class="head">
+<ul class="nav justify-content-center">
+<li class="nav-item">
+  <a class="nav-link active" href="/">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link disabled" href="#">Disabled</a>
+</li>
+</ul>
+<br>
+<br>
+</nav>
+</head>
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Example file input</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+</form>
+<br>
+<br>
+<br>
+<form>
+
+
 
 
     <body>
     <div>
     <form id="newWorld-form" action="/new" method="POST">
-        <label for="">World Title</label>
-            <textarea rows="" cols="" name="worldTitle"></textarea>
-        <label for="">Background</label>
-            <textarea rows="" cols="" name="background"></textarea>
-        <label for="">technologie</label>
-            <textarea rows="" cols="" name="technologie"></textarea>
-        <label for="">Time</label>
-            <textarea rows="" cols="" name="time"></textarea>
-        <label for="">culture</label>
-            <textarea rows="" cols="" name="culture"></textarea>
-        <label for="">combatTech</label>
-            <textarea rows="" cols="" name="combatTech"></textarea>
-        <label for="">history</label>
-            <textarea rows="" cols="" name="history"></textarea>
-        <label for="">supernaturalEl</label>
-            <textarea rows="" cols="" name="supernaturalEl"></textarea>
-        <button type="submit">Submit</button>
-        </form>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">World Title</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="worldTitle"></textarea>
     </div>
-    <div><a href="/">Return Home</a></div>
+    <div>
+        <label for="exampleFormControlTextarea1">Background</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="background"></textarea>
+    </div>
+        <label for="exampleFormControlTextarea1">technologie</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="technologie"></textarea>
+    <div>   
+        <label for="exampleFormControlTextarea1">Time</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="time"></textarea>
+    </div>
+    <div>
+        <label for="exampleFormControlTextarea1">culture</label>
+            <textarea class="form-control" class="form-control" id="exampleFormControlTextarea1" rows="3" name="culture"></textarea>
+    </div>
+    <div>
+        <label for="exampleFormControlTextarea1">combatTech</label>
+            <textarea id="exampleFormControlTextarea1" class="form-control" rows="3" name="combatTech"></textarea>
+    </div>
+    <div>
+        <label for="exampleFormControlTextarea1">history</label>
+            <textarea id="exampleFormControlTextarea1" class="form-control" rows="3" name="history"></textarea>
+    </div>
+    <div>
+        <label for="exampleFormControlTextarea1">supernaturalEl</label>
+            <textarea id="exampleFormControlTextarea1" class="form-control" rows="3" name="supernaturalEl"></textarea>
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Create New World</button>
+    <br>
+    <br>
+        </form> ``
+    </div>
     </body>
 </html>

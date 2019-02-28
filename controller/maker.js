@@ -15,12 +15,13 @@ function changeWorld(req, res){
 }
 function updateWorld(req, res) {
     console.log(req.body, 'this is the update path')
+    console.log(req.params.id)
     World.findByIdAndUpdate(req.params.id, req.body, function(err, world){
-    world.change = req.body.change;
+    // world.change = req.body.change;
           world.updated_at = Date.now();
           world.save( function ( err, world){
-            res.redirect( '/showWorld' );
           });
+          res.redirect( '/' + req.params.id);
         });
     
 }

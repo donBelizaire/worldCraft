@@ -5,7 +5,7 @@ var changeCtrl = require('../controller/change')
 var worldCtrl = require('../controller/world');
 
 router.get('/', worldCtrl.home);
-router.get('/new', worldCtrl.newWorld);
+router.get('/new', worldCtrl.createWorld);
 router.get('/:id', worldCtrl.showWorld);
 router.post('/new', worldCtrl.createWorld);
 router.post('/worlds/:id/change', changeCtrl.create);

@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+.head {
+  background: rgba(64, 67, 68, 0.281);
+}
+
+.container { 
+  background-image: url('https://imgur.com/I7CdlJg.png');
+  color: white;
+
+}
