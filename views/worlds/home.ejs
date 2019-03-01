@@ -40,41 +40,21 @@
 
 
 <body class="homeBody">
-    
+<span>
 <% worlds.forEach(function(w) { %>
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="'https://imgur.com/I7CdlJg.png'" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">World Title</h5>
-    <p class="card-text"><%= w.worldTitle %></p>
-    <a href="./<%=w._id %>" class="btn btn-primary">Enter</a>
-    <a href="./worlds/<%=w._id %>" class="btn btn-primary">EDIT WORLD</a>
-    <% }); %>
-  </div>
+<div class="card-body">
+<h5 class="card-title"><%= w.worldTitle %></h5>
+
+<a href="./<%=w._id %>" class="btn btn-primary">Enter</a>
+<a href="./worlds/<%=w._id %>" class="btn btn-primary">EDIT WORLD</a>
+<% }); %>
 </div>
+</div>
+</span>
 
 </body>
 
 
 
-
-
-<table id="list">
-  <thead>
-    <tr>
-      <th>World Title</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% worlds.forEach(function(w) { %>
-      <tr>
-        <td><%= w.worldTitle %></td>
-        <td><a href="./<%=w._id %>">DETAILS</a></td>
-        <td><a href="./worlds/<%=w._id %>">EDIT WORLD</a></td>
-      </tr>
-      <% }); %>
-    </tbody>
-    
-  </table>
   <%- include('../partials/footer') %>
